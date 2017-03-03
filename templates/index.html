@@ -27,9 +27,6 @@
                 <span class='linktitle' onclick='javascript:playmusic( {{m['id']}}, "{{r[0]['piece']}}", "{{r[0]['composer']}}", "{{m['movement']}}", "{{m['title']}}", "{{r[0]['performers'].replace(';', ', ')}}" )'> 
                   {{ m['title'] }} 
                 </span> 
-                <!--<audio controls>
-                  <source src="http://localhost:8337/item/{{ m['id'] }}/file">
-                </audio> -->
               <br />
               </div>
             {% endfor %}

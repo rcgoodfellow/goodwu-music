@@ -25,5 +25,3 @@ for s in hits:
         s.get('performers', '').replace(";", ", "))
     )
 
-#res = es.search(index="music", body={"query": {"match_all": {}}})
-#print(json.dumps(res, indent=2))

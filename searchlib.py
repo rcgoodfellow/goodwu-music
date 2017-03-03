@@ -12,10 +12,6 @@ def search(q):
     #multilevel sort
     hits = sorted(hits, key=lambda x: (x['composer'], x['piece'], int(x['movement'])))
 
-    #grouped = list(dict(groupby(hits, lambda x: (x['composer'], x['piece']))).values())
-    #grouped = list(map(lambda x: list(x), grouped))
-    #print(grouped)
-    
     groups = []
     for _, group in groupby(hits, lambda x: (x['composer'], x['piece'])):
         groups.append(list(group))
