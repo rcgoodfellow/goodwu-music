@@ -1,0 +1,114 @@
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+#content {
+  min-width: 900px;
+  height: 100%;
+}
+
+#fhole {
+  height: 47px;
+  float: left;
+  margin: 20px;
+}
+
+#searchbar {
+  float: left;
+  margin: 20px;
+  width: 85%;
+  overflow: hidden;
+}
+
+#searchbar input {
+  padding: 10px;
+  font-size: 1.2em;
+  width: 95%;
+}
+
+#searchbar input[type="text"] {
+  min-width: 700px;
+}
+
+#searchbar input[type="submit"] {
+  display: none;
+}
+
+#searchsvg {
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+#searchresults {
+  clear: left;
+  margin: 30px;
+}
+
+#searchresult {
+  margin: 20px;
+}
+
+.piece {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.linktitle{
+  color: #1a0dab;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.composer {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.movements {
+  margin: 5px;
+}
+.movementlink {
+  margin-left: 20px;
+}
+
+.movement {
+  font-size: 1.1em;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.performers {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 5px;
+}
+
+#player {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+}
+
+#player #nowplaying {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+
+#player audio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  width: 100%;
+}
+
