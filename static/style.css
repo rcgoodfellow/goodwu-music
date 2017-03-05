@@ -41,14 +41,16 @@ body {
 }
 
 #searchresults {
-  clear: left;
   overflow-y: auto;
   max-height: 100%;
   position: absolute;
-  top: 100px;
-  bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 
 #searchresult {
@@ -105,6 +107,7 @@ body {
   right: 0;
   bottom: 0;
   height: 70px;
+  background-color: white;
 }
 
 #player #nowplaying {
@@ -112,6 +115,7 @@ body {
   left: 0;
   right: 0;
   bottom: 50px;
+  background-color: white;
 }
 
 #player audio {
@@ -120,5 +124,15 @@ body {
   right: 0;
   bottom: 5px;
   width: 100%;
+}
+
+#topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 15px;
+  height: 100px;
+  background-color: white;
+  z-index: 10;
 }
 
