@@ -6,7 +6,7 @@ from itertools import groupby
 
 def search(q):
     es = Elasticsearch()
-    res = es.search(index="music", body={"query": {"match": {"_all": q}}})
+    res = es.search(index="music", body={"min_score": 0.1, "from":0, "size":47, "query": {"match": {"_all": q}}})
     hits = map(lambda x: x['_source'], res['hits']['hits'])
 
     #multilevel sort

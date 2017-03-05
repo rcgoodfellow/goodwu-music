@@ -42,7 +42,13 @@ body {
 
 #searchresults {
   clear: left;
-  margin: 30px;
+  overflow-y: auto;
+  max-height: 100%;
+  position: absolute;
+  top: 100px;
+  bottom: 100px;
+  left: 0;
+  right: 0;
 }
 
 #searchresult {
@@ -86,6 +92,10 @@ body {
 .performers {
   font-size: 1.1em;
   font-style: italic;
+  margin: 5px;
+}
+.album {
+  font-size: 1.1em;
   margin: 5px;
 }
 

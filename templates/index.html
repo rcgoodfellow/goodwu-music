@@ -30,7 +30,8 @@
               <br />
               </div>
             {% endfor %}
-            <span class='performers'> {{ r[0]['performers'].replace(";", ", ") }} </span>
+            <span class='performers'> {{ r[0]['performers'].replace(";", ", ") }} </span> <br /> 
+            <span class='album'> {{ r[0]['album'] }} </span>
           </div>
         {% endfor %}
       </div>
