@@ -44,10 +44,8 @@ body {
   overflow-y: auto;
   max-height: 100%;
   position: absolute;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  top: 0;
-  bottom: 0;
+  top: 100px;
+  bottom: 100px;
   left: 0;
   right: 0;
   z-index: -1;
@@ -115,7 +113,9 @@ body {
   left: 0;
   right: 0;
   bottom: 50px;
-  background-color: white;
+  height: 50px;
+  border-top: 2px solid #ebebeb;
+  background-color: #fafafa;
 }
 
 #player audio {
@@ -130,9 +130,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  right: 15px;
+  right: 0px;
   height: 100px;
-  background-color: white;
+  background-color: #fafafa;
+  border-bottom: 2px solid #ebebeb;
   z-index: 10;
 }
 
