@@ -14,6 +14,10 @@ def start():
 
     return render_template('index.html', query=q, searchresults=result)
 
+@app.route("/new")
+def new():
+    return render_template("new.html")
+
 if __name__ == "__main__":
     app.run()
 

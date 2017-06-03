@@ -5,7 +5,7 @@ from itertools import groupby
 
 
 def search(q):
-    es = Elasticsearch()
+    es = Elasticsearch(['localhost:9200'])
     res = es.search(index="music", body={"min_score": 0.1, "from":0, "size":4700, "query": {"match": {"_all": q}}})
     hits = map(lambda x: x['_source'], res['hits']['hits'])
 

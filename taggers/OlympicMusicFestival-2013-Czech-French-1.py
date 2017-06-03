@@ -18,7 +18,7 @@ cd = CD(
             Piece(
                 'String Quartet No. 11',
                 'Antonín Dvořák',
-                ['Jessica Lee', 'Tien-Hsin Cindy Wu', 'Alan Iglitzin', 'Patrick Jee'],
+                ['Tien-Hsin Cindy Wu', 'Jessica Lee', 'Alan Iglitzin', 'Patrick Jee'],
                 [
                     Movement(1, 'Allegro'),
                     Movement(2, 'Poco adagio e molto cantabile'),

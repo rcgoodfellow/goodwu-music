@@ -9,15 +9,25 @@ body {
 }
 
 #fhole {
+  top: 10px;
   height: 47px;
-  float: left;
-  margin: 20px;
+  position: absolute;
+  left: 10px;
+}
+
+#new-icon {
+  top: 17px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
 #searchbar {
-  float: left;
-  margin: 20px;
-  width: 85%;
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  right: 30px;
   overflow: hidden;
 }
 
@@ -44,7 +54,7 @@ body {
   overflow-y: auto;
   max-height: 100%;
   position: absolute;
-  top: 100px;
+  top: 70px;
   bottom: 100px;
   left: 0;
   right: 0;
@@ -131,7 +141,7 @@ body {
   top: 0;
   left: 0;
   right: 0px;
-  height: 100px;
+  height: 70px;
   background-color: #fafafa;
   border-bottom: 2px solid #ebebeb;
   z-index: 10;

@@ -9,7 +9,7 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 
-es = Elasticsearch()
+es = Elasticsearch(['localhost:9200'])
 res = es.search(index="music", body={"min_score": 0.1, "from":0, "size":47, "query": {"match": {"_all": sys.argv[1]}}})
 hits = map(lambda x: x['_source'], res['hits']['hits'])
 
