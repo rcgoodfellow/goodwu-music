@@ -1,0 +1,72 @@
+body {
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+#content {
+  display: table;
+  margin: 40 auto;
+}
+
+#content div {
+  display: inline-block;
+}
+
+input[type="text"] {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.input-full {
+  width: 505px;
+}
+
+.input-half {
+  width: 250px;
+}
+
+.input-long {
+  width: 350px;
+}
+
+.input-short {
+  width: 150px;
+}
+
+.section-head {
+  font-weight: bold;
+}
+
+select {
+  font-size: 1.2em;
+}
+
+button {
+  font-size: 1.2em;
+}
+
+#upload {
+  display: table;
+  margin: 0 auto;
+}
+
+.filespan {
+  color: green;
+  margin-left: 10px;
+}
+
+#delete {
+  color: red;
+}
+#delete:active {
+  color: red;
+}
+#delete:hover {
+  color: red;
+}
+#delete:link {
+  color: red;
+}
+#delete:visited {
+  color: red;
+}

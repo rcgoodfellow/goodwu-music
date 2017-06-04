@@ -12,7 +12,7 @@ function playmusic(id, piece, composer, movement, title, performers) {
     "<span class='performers'>"+performers+"</span>";
 
   a = document.getElementById("theaudio");
-  a.innerHTML = "<source src=http://"+window.location.hostname+":8337/item/"+id+"/file>";
+  a.innerHTML = "<source src=http://"+window.location.hostname+":8047/"+id+"_"+movement+".flac>";
   a.load();
   a.play();
 

@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>GoodWu Music</title>
+    <link rel='stylesheet' href='static/new.css'>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src='static/new.js'> </script>
+  </head>
+  <body>
+    <div id="content">
+    <form 
+      id="upload_form" 
+      name="upload_form" 
+      action="edit" 
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <!-- ~~~~~~~~~~~~~~~~~~~~~ Performance ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <span class="section-head">Performance:</span>
+      <br/>
+      <input 
+        class="input-full"
+        type="text" 
+        name="composer" 
+        placeholder="composer" 
+        value="{{ work.composer }}"
+        required
+      >
+      <br/>
+      <input 
+        class="input-long"
+        type="text" 
+        name="title" 
+        placeholder="title"
+        value="{{ work.title }}"
+        required
+      >
+      <input 
+        class="input-short"
+        type="text" 
+        name="catalogue" 
+        placeholder="catalogue"
+        value="{{ work.catalogue }}"
+      >
+      <br/>
+      <input
+        class="input-short"
+        type="text"
+        name="recording-date"
+        placeholder="recording date"
+        value="{{ work.recording_date }}"
+        required
+      >
+      <input
+        class="input-long"
+        type="text"
+        name="venue"
+        placeholder="venue"
+        value="{{ work.venue}}"
+        required
+      >
+      <br />
+      <br/>
+      <br/>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~ Musicians ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <span class="section-head">Musicians:</span>
+      <br/>
+      <div id="musicians">
+      {% for m in work.musicians %}
+        <input 
+          class="input-long"
+          type="text" 
+          name="musician-{{ loop.index }}" 
+          placeholder="musician"
+          value="{{ m[0] }}"
+        >
+        <input
+          class="input-short"
+          type="text"
+          name="instrument-{{ loop.index }}"
+          placeholder="instrument"
+          value="{{ m[1] }}"
+        >
+        <br/>
+      {% endfor %}
+      </div>
+      <br/>
+      <a href="javascript:{}" onclick="addMusician()">add musician</a>
+      <br/>
+      <br/>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~ Movements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <span class="section-head">Movements:</span>
+      <br/>
+      <div id="movements">
+      {% for m in work.movements %}
+        <input 
+          class="input-long" 
+          type="text" 
+          name="movement_name-{{ loop.index }}"
+          placeholder="name"
+          value="{{ m }}"
+        >
+        <span class="input-short filespan">{{ work.files[loop.index] }}</span>
+        <br/>
+        <input 
+          type="file"
+          name="movement_file-{{ loop.index }}"
+        >
+        <br/>
+      {% endfor %}
+      </div>
+      <br/>
+      <a href="javascript:{}" onclick="addMovement()">add movement</a>
+      <br />
+      <br />
+      
+      <!-- ~~~~~~~~~~~~~~~~~~~~~ Recording ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <input 
+        class="input-full" 
+        type="text" 
+        name="tags" 
+        placeholder="tags"
+        value="{{ work.tags }}"
+      >
+      <br />
+      <input type="hidden" type="text" name="_id" value="{{ work.id }}"/>
+    </form>
+
+    <button id="upload" form="upload_form">Update</button>
+    <a id="delete" href="delete?id={{ work.id }}">delete</a>
+    </div>
+  </body>
+</html>
