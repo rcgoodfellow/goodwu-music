@@ -6,11 +6,11 @@ from common import Work
 import pprint
 
 def delete(id_):
-    es = Elasticsearch(['localhost:9200'])
+    es = Elasticsearch(['elasticsearch:9200'])
     res = es.delete(index="music", doc_type="performance", id=id_)
 
 def search(q):
-    es = Elasticsearch(['localhost:9200'])
+    es = Elasticsearch(['elasticsearch:9200'])
     res = es.search(
             index="music", 
             body={
@@ -54,7 +54,7 @@ def search(q):
     return results
 
 def index(x):
-    es = Elasticsearch(['localhost:9200'])
+    es = Elasticsearch(['elasticsearch:9200'])
     doc = json.dumps(x.__dict__)
     print("DICT")
     print(x.__dict__)
